@@ -1,35 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class SpeedLimit : MonoBehaviour
+namespace Gameplay
 {
-    public float maxSpeed = 5f;
-    public float slowSpeed = 2f;
-    public float flowFactor = 0.5f;
-
-    private Rigidbody2D rigitbody;
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class SpeedLimit : MonoBehaviour
     {
-        rigitbody = GetComponent<Rigidbody2D>();
-    }
+        public float maxSpeed = 5f;
+        public float slowSpeed = 2f;
+        public float flowFactor = 0.5f;
 
-    private void Stabilize()
-    {
-        if (rigitbody.velocity.magnitude <= slowSpeed) {
-            rigitbody.velocity *= flowFactor;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (rigitbody.velocity.magnitude > maxSpeed)
+        private Rigidbody2D _rigidbody;
+        private Animator _animator;
+        private static readonly int Speed = Animator.StringToHash("Speed");
+        // Start is called before the first frame update
+        void Start()
         {
-            rigitbody.velocity = rigitbody.velocity.normalized * maxSpeed;
+            _animator = GetComponent<Animator>();
+            _rigidbody = GetComponent<Rigidbody2D>();
         }
-        Stabilize();
+
+        private void FixedUpdate()
+        {
+            if (_rigidbody.velocity.magnitude > maxSpeed)
+            {
+                _rigidbody.velocity = _rigidbody.velocity.normalized * maxSpeed;
+            }
+            _animator.SetFloat(Speed, Mathf.Lerp(0, maxSpeed, _rigidbody.velocity.magnitude));
+            Stabilize();
+        }
+
+        private void Stabilize()
+        {
+            if (_rigidbody.velocity.magnitude <= slowSpeed) {
+                _rigidbody.velocity *= flowFactor;
+            }
+        }
     }
 }

@@ -6,12 +6,9 @@ namespace Gameplay
     {
         private void OnTriggerStay2D(Collider2D collision)
         {
+            if (collision.GetComponent<Wave>() == null) return;
             Debug.Log(collision);
-            if (collision.GetComponent<Wave>() != null)
-            {
-                Debug.Log(collision);
-                Destroy(collision.gameObject);
-            }   
+            Destroy(collision.gameObject);
         }
 
     }

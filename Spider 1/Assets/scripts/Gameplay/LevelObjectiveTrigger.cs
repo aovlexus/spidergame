@@ -1,22 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using ManagersScripts;
 using UnityEngine;
 
-public class LevelObjectiveTrigger : MonoBehaviour
+namespace Gameplay
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LevelObjectiveTrigger : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Managers.Mission.ReachObjective();
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Managers.Mission.ReachObjective();
+        }
     }
 }

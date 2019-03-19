@@ -1,25 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using ManagersScripts;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+namespace Gameplay
 {
-    private Vector3 originPostion;
-    // Start is called before the first frame update
-    void Start()
+    public class Player : MonoBehaviour
     {
-        originPostion = transform.position;
-    }
+        private Vector3 _originPosition;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            _originPosition = transform.position;
+        }
 
-    void OnDanger()
-    {
-        Managers.Player.Fail();
-    }
+        void OnDanger()
+        {
+            Managers.Player.Fail();
+        }
 
+    }
 }
