@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/scenes/Startup.unity
     guid: 151d26f5b436d4b54b8253830e302d38
   - enabled: 1
+    path: Assets/scenes/MainMenu.unity
+    guid: 569f136a840f6447bb22694af636bac5
+  - enabled: 1
     path: Assets/scenes/tests/FirstTaps.unity
     guid: 22bd36df930874e99a61e0c8a55b33e5
   - enabled: 1

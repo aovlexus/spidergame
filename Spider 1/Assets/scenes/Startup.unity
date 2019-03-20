@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelList:
-  - FirstTaps
+  - MainMenu
   - HowToFlow
   - Cascade
   - AroundDeath
