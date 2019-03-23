@@ -28,8 +28,8 @@ public class DataManager : MonoBehaviour, IGameManager {
 		gamestate.Add("inventory", Managers.Inventory.GetData());
 		gamestate.Add("health", Managers.Player.health);
 		gamestate.Add("maxHealth", Managers.Player.maxHealth);
-		gamestate.Add("curLevel", Managers.Mission.curLevel);
-		gamestate.Add("maxLevel", Managers.Mission.maxLevel);
+		gamestate.Add("curLevel", Managers.Mission.CurLevel);
+		gamestate.Add("maxLevel", Managers.Mission.MaxLevel);
 
 		FileStream stream = File.Create(_filename);
 		BinaryFormatter formatter = new BinaryFormatter();
