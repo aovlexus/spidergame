@@ -319,7 +319,6 @@ GameObject:
   - component: {fileID: 346714762}
   - component: {fileID: 346714761}
   - component: {fileID: 346714766}
-  - component: {fileID: 346714764}
   - component: {fileID: 346714763}
   m_Layer: 5
   m_Name: ChooseLevelScreen
@@ -395,28 +394,9 @@ CanvasGroup:
   m_GameObject: {fileID: 346714759}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!95 &346714764
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346714759}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b328135a24ac459d846233d1848fefa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &346714766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b153518b97b4f5bbfdc6921ea89181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartSelectable: {fileID: 1222463677}
+  startSelectable: {fileID: 0}
   onScreenStart:
     m_PersistentCalls:
       m_Calls: []
@@ -651,7 +631,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1198446079}
   - component: {fileID: 1198446082}
-  - component: {fileID: 1198446081}
   - component: {fileID: 1198446080}
   m_Layer: 5
   m_Name: StartScreen
@@ -691,28 +670,9 @@ CanvasGroup:
   m_GameObject: {fileID: 1198446078}
   m_Enabled: 1
   m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!95 &1198446081
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198446078}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b328135a24ac459d846233d1848fefa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1198446082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b153518b97b4f5bbfdc6921ea89181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartSelectable: {fileID: 0}
+  startSelectable: {fileID: 0}
   onScreenStart:
     m_PersistentCalls:
       m_Calls: []
@@ -749,7 +709,7 @@ GameObject:
   - component: {fileID: 1222463678}
   - component: {fileID: 1222463677}
   m_Layer: 5
-  m_Name: LevelChooseButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

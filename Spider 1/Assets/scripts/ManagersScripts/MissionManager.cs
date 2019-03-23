@@ -38,12 +38,17 @@ namespace ManagersScripts
 			Messenger.Broadcast(GameEvent.LEVEL_COMPLETE);
 		}
 
+		public void LoadLevel(string levelName)
+		{
+			CurLevel = levelList.IndexOf(levelName);
+			SceneManager.LoadScene(levelName);
+		}
 		public void GoToNext() {
 			if (CurLevel < MaxLevel) {
 				CurLevel++;
-				string level_name = LevelList[CurLevel];
-				Debug.Log("Loading " + level_name);
-				SceneManager.LoadScene(level_name);
+				var levelName = LevelList[CurLevel];
+				Debug.Log("Loading " + levelName);
+				SceneManager.LoadScene(levelName);
 			} else {
 				Debug.Log("Last level");
 				Messenger.Broadcast(GameEvent.GAME_COMPLETE);
@@ -51,9 +56,9 @@ namespace ManagersScripts
 		}
 
 		public void RestartCurrent() {
-			string level_name = LevelList[CurLevel];
-			Debug.Log("Loading " + level_name);
-			SceneManager.LoadScene(level_name);
+			var levelName = LevelList[CurLevel];
+			Debug.Log("Loading " + levelName);
+			SceneManager.LoadScene(levelName);
 		}
 	}
 }

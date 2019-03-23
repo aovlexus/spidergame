@@ -10,7 +10,7 @@ namespace GameUI
         public UIScreen startScreen;
         public UnityEvent onSwitchScreen = new UnityEvent();
 
-        private Component[] _screens = new Component[0];
+        private UIScreen[] _screens = new UIScreen[0];
 
         private UIScreen _currentScreen;
         public UIScreen CurrentScreen => _currentScreen;
@@ -21,7 +21,7 @@ namespace GameUI
         // Start is called before the first frame update
         private void Start()
         {
-            var screens = GetComponentsInChildren<UIScreen>(true);
+            _screens = GetComponentsInChildren<UIScreen>(true);
 
             if (startScreen)
             {
@@ -36,10 +36,10 @@ namespace GameUI
 
             if (_currentScreen)
             {
-                _currentScreen.CloseScreen();
                 _previousScreen = _currentScreen;
             }
 
+            CloseAllScreens();
             _currentScreen = screen;
             _currentScreen.StartScreen();
             _currentScreen.gameObject.SetActive(true);
@@ -47,6 +47,13 @@ namespace GameUI
             onSwitchScreen?.Invoke();
         }
 
+        private void CloseAllScreens()
+        {
+            foreach (var screen in _screens)
+            {
+                screen.CloseScreen();
+            }
+        }
         public void GoToPreviousScreen()
         {
             if (_previousScreen)

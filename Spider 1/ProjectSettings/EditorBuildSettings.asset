@@ -9,57 +9,57 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/scenes/Startup.unity
+    path: Assets/Scenes/Startup.unity
     guid: 151d26f5b436d4b54b8253830e302d38
   - enabled: 1
-    path: Assets/scenes/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 569f136a840f6447bb22694af636bac5
   - enabled: 1
-    path: Assets/scenes/tests/FirstTaps.unity
+    path: Assets/Scenes/tests/FirstTaps.unity
     guid: 22bd36df930874e99a61e0c8a55b33e5
   - enabled: 1
-    path: Assets/scenes/levels/YModeDeath.unity
+    path: Assets/Scenes/levels/YModeDeath.unity
     guid: cc65f2b970cc44a95b927c38c02e1403
   - enabled: 1
-    path: Assets/scenes/levels/AroundDeath.unity
+    path: Assets/Scenes/levels/AroundDeath.unity
     guid: 4105c742883b445d899bed86f51e4f16
   - enabled: 1
-    path: Assets/scenes/levels/GoInside.unity
+    path: Assets/Scenes/levels/GoInside.unity
     guid: 30027e1b9fe1d4d09a41c0ecdcbfa10b
   - enabled: 1
-    path: Assets/scenes/levels/Python.unity
+    path: Assets/Scenes/levels/Python.unity
     guid: 7c16863f0e7404678aad7955cabc6476
   - enabled: 1
-    path: Assets/scenes/levels/HowToFlow.unity
+    path: Assets/Scenes/levels/HowToFlow.unity
     guid: 792ecc4551fdc479192d7e576c6d4f4f
   - enabled: 1
-    path: Assets/scenes/levels/Cascade.unity
+    path: Assets/Scenes/levels/Cascade.unity
     guid: 726dbaf107fbf467b9408137488ed222
   - enabled: 1
-    path: Assets/scenes/levels/StopPushingMe.unity
+    path: Assets/Scenes/levels/StopPushingMe.unity
     guid: 942efae966e1847f6acda40e5122ddae
   - enabled: 1
-    path: Assets/scenes/tests/DontTouchThis.unity
+    path: Assets/Scenes/tests/DontTouchThis.unity
     guid: 22dc42c647d864058af30011fc3f7b95
   - enabled: 1
-    path: Assets/scenes/levels/4Flows.unity
+    path: Assets/Scenes/levels/4Flows.unity
     guid: 8862bbbcad93846899ec5a0bdb103d89
   - enabled: 1
-    path: Assets/scenes/levels/ItMoves.unity
+    path: Assets/Scenes/levels/ItMoves.unity
     guid: b1dd01bd882064d63b650fb826576db6
   - enabled: 1
-    path: Assets/scenes/levels/MyFirstCristal.unity
+    path: Assets/Scenes/levels/MyFirstCristal.unity
     guid: 246928b58c50c4192aa6f7bebee8b9a3
   - enabled: 1
-    path: Assets/scenes/levels/Neck.unity
+    path: Assets/Scenes/levels/Neck.unity
     guid: 2d25f9a2b678543bf8c72484ea021a08
   - enabled: 1
-    path: Assets/scenes/levels/4Rooms.unity
+    path: Assets/Scenes/levels/4Rooms.unity
     guid: 2b94ed246e3234d03b9e9b2f24d789dd
   - enabled: 1
-    path: Assets/scenes/levels/2Doors.unity
+    path: Assets/Scenes/levels/2Doors.unity
     guid: 3db6f2edf48f3433f9cf6e74d586ee89
   - enabled: 1
-    path: Assets/scenes/levels/Doors.unity
+    path: Assets/Scenes/levels/Doors.unity
     guid: 4b1e673b0d0f042b795741f74f5059c4
   m_configObjects: {}

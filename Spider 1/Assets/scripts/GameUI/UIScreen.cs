@@ -5,49 +5,51 @@ using UnityEngine.UI;
 
 namespace GameUI
 {
-    [RequireComponent(typeof(Animator))]
     [RequireComponent(typeof(CanvasGroup))]
     public class UIScreen : MonoBehaviour
     {
         #region Variables
 
-        [Header("Main Variables")] public Selectable StartSelectable;
+        [Header("Main Variables")] public Selectable startSelectable;
 
         [Header("Screen Events")] public UnityEvent onScreenStart = new UnityEvent();
         public UnityEvent onScreenClose = new UnityEvent();
-
-        private Animator _animator;
-        private static readonly int Show = Animator.StringToHash("Show");
-        private static readonly int Close = Animator.StringToHash("Close");
-
+        private CanvasGroup _canvasGroup;
+        
+        private const float Invisible = 0f; 
+        private const float Visible = 1f;
         #endregion
 
-        void Start()
+        #region UnityRenderingPipeline
+        private void Awake()
         {
-            _animator = GetComponent<Animator>();
-            if (StartSelectable)
+            _canvasGroup = GetComponent<CanvasGroup>();
+            if (startSelectable)
             {
-                EventSystem.current.SetSelectedGameObject(StartSelectable.gameObject);
+                EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
             }
         }
+        #endregion
 
         public virtual void StartScreen()
         {
             onScreenStart?.Invoke();
-            SetAnimatorTrigger(Show);
-            Debug.Log("Show");
+            SetActive(true);
         }
         
         public virtual void CloseScreen()
         {
             onScreenClose?.Invoke();
-            SetAnimatorTrigger(Close);
+            SetActive(false);
         }
 
-        private void SetAnimatorTrigger(int id)
+        private void SetActive(bool active)
         {
-            if (_animator)
-                _animator.SetTrigger(id);            
+            if (!_canvasGroup || _canvasGroup == null) return;
+
+            _canvasGroup.alpha = active ? Visible : Invisible;
+            _canvasGroup.interactable = active;
+            _canvasGroup.blocksRaycasts = active;
         }
     }
 }
