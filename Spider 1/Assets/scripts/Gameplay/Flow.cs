@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Level;
+using UnityEngine;
 
 namespace Gameplay
 {
@@ -7,6 +8,13 @@ namespace Gameplay
         public float flowSpeed = 4f;
         public Vector3 flowDirection = new Vector3(1, 0, 0);
         public float stabiltyForceFactor = 1f;
+
+        private void Awake()
+        {
+            var particles = GetComponentInChildren<FlowParticleControl>();
+            particles.speed = flowSpeed;
+            particles.direction = flowDirection;
+        }
 
         private void Stabilize(Collider2D collision)
         {
