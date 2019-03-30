@@ -197,6 +197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: walls
       objectReference: {fileID: 0}
+    - target: {fileID: 5613448428688999487, guid: 7e75d82ec19a641289c7e2756136d9e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5613448428688999473, guid: 7e75d82ec19a641289c7e2756136d9e5,
         type: 3}
       propertyPath: m_LocalPosition.x
