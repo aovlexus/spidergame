@@ -9,30 +9,30 @@ namespace Gameplay
         public float slowSpeed = 2f;
         public float flowFactor = 0.5f;
 
-        private Rigidbody2D _rigidbody;
+        private Rigidbody2D _rigidBody;
         private Animator _animator;
         private static readonly int Speed = Animator.StringToHash("Speed");
         // Start is called before the first frame update
         void Start()
         {
             _animator = GetComponent<Animator>();
-            _rigidbody = GetComponent<Rigidbody2D>();
+            _rigidBody = GetComponent<Rigidbody2D>();
         }
 
         private void FixedUpdate()
         {
-            if (_rigidbody.velocity.magnitude > maxSpeed)
+            if (_rigidBody.velocity.magnitude > maxSpeed)
             {
-                _rigidbody.velocity = _rigidbody.velocity.normalized * maxSpeed;
+                _rigidBody.velocity = _rigidBody.velocity.normalized * maxSpeed;
             }
-            _animator.SetFloat(Speed, Mathf.Lerp(0, maxSpeed, _rigidbody.velocity.magnitude));
+            _animator.SetFloat(Speed, Mathf.Lerp(0, maxSpeed, _rigidBody.velocity.magnitude));
             Stabilize();
         }
 
         private void Stabilize()
         {
-            if (_rigidbody.velocity.magnitude <= slowSpeed) {
-                _rigidbody.velocity *= flowFactor;
+            if (_rigidBody.velocity.sqrMagnitude <= slowSpeed * slowSpeed) {
+                _rigidBody.velocity *= flowFactor;
             }
         }
     }
