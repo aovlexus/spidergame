@@ -551,6 +551,11 @@ PrefabInstance:
       propertyPath: m_SortingFudge
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 87692502853855946, guid: 5e5c7c4ea51854e0bb8a62e6b7f6a245,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e5c7c4ea51854e0bb8a62e6b7f6a245, type: 3}
 --- !u!1 &6447654839546145837 stripped

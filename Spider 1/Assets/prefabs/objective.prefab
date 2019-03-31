@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 658666531125352212}
   - component: {fileID: 8453169655260454419}
   - component: {fileID: 1159664331738549325}
+  - component: {fileID: 1183437975917075527}
   m_Layer: 0
   m_Name: objective
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   - {fileID: 2774892392007759713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0.6, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.6, z: -38.86136}
 --- !u!212 &658666531125352212
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -117,6 +118,25 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &1183437975917075527
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658666531125352211}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a9716a3bfc9b4ed0a09717347ccf923, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &805258011554932056
 GameObject:
   m_ObjectHideFlags: 0
