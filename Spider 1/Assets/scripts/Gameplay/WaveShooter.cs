@@ -16,13 +16,11 @@ namespace Gameplay
             _camera = GetComponent<Camera>();
         }
 
-        // Update is called once per frame
         private void Update()
         {
             
             if (Input.GetMouseButton(0))
             {
-                // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
                 _pressureTime += Time.deltaTime;
             }
 
@@ -33,12 +31,15 @@ namespace Gameplay
             _pressureTime = 0;
         }
 
+        private Vector3 GetMousePosition()
+        {
+            return _camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -_camera.transform.position.z));
+        }
+        
         private void CreateWave(float factor)
         {
-            var clickPosition = _camera.ScreenToWorldPoint(
-                new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z)
-            );
-            
+            var clickPosition = GetMousePosition();
+
             RaycastHit2D collision = Physics2D.Raycast(
                 new Vector2(
                     clickPosition.x,
@@ -57,5 +58,6 @@ namespace Gameplay
             // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
             _wave.GetComponent<Wave>().WaveFactor = factor;
         }
+        
     }
 }
