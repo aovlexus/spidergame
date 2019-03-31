@@ -302,8 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelButtonPrefab: {fileID: 888570842965194004, guid: 11bc9f89d87d446e6924e130eeb68b96,
     type: 3}
-  levelsList: {fileID: 0}
-  levelLoader: {fileID: 0}
+  levelsList: {fileID: 11400000, guid: e25736fd67efe476485a35816ea9f87c, type: 2}
 --- !u!1 &4638493945413598225
 GameObject:
   m_ObjectHideFlags: 0

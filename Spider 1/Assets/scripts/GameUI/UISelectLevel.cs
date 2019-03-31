@@ -9,7 +9,6 @@ namespace GameUI
     {
         [SerializeField] private GameObject levelButtonPrefab;
         [SerializeField] private LevelsList levelsList;
-        [SerializeField] private LevelLoader levelLoader;
 
         private void Start()
         {
