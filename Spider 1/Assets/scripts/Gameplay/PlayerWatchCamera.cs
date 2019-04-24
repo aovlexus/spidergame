@@ -20,6 +20,7 @@ namespace Gameplay
         {
             var position = _camera.transform.position;
             var cameraProjection = new Vector3(position.x, position.y, 0);
+            if (!player) return;
             var dif = cameraProjection - player.transform.position;
             if (!(dif.sqrMagnitude >= maxDistance)) return;
 

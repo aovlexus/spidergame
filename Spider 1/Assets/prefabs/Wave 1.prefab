@@ -221,5 +221,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxWaveForce: 20
-  minWaveForce: 2
+  minWaveForce: 0.1
   timeToLife: 3

@@ -17,7 +17,6 @@ namespace Level
             particleSystemMain.startSpeed = 0.5f * speed;
             var particleSystemShape = _particleSystem.shape;
             var angle = Mathf.Rad2Deg * Mathf.Atan2(direction.normalized.x, direction.normalized.y);
-            print(angle);
             particleSystemShape.rotation =  new Vector3(-90 + angle, 90, 0);
             _particleSystem.Play();
         }
